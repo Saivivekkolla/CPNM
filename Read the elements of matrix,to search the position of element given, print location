@@ -1,0 +1,54 @@
+#include<stdio.h>
+ int main() 
+{
+    int p, q, r, s, b;
+    int   count= 0;
+//  input number of rows and columns
+    printf(" INPUT THE NUMBER OF ROWS \n");
+    scanf("%d",&r);
+    printf("INPUT THE NUMBER OF COLUMNS\n");
+    scanf("%d",&s);
+    int a[r][s];
+    
+    // program to read the elements of matrix 
+    printf("INPUT THE ELEMENTS OF MATRIX\n");
+    for (p = 0; p < r; p = p+1)
+    {
+        for (q = 0; q < s; q = q+1)
+        {
+            printf("INPUT THE ELEMENT [%d,%d] : ",p,q);
+            scanf("%d", &a[p][q]);
+        }
+    }
+    printf("THE MATRIX IS \n");
+    for (p = 0; p < r; p = p+1)
+    {
+        for (q = 0; q < s; q = q+1)
+        {
+            printf("%d ", a[p][q]);
+        }
+        printf("\n");
+    }
+
+
+   printf("INPUT THE ELEMENT YOU WANT TO SEARCH IN THE MATRIX: ");
+  scanf("%d", &b);
+    for (p = 0; p < r ; p = p+1)
+    { 
+        for (q = 0; q < s; q = q+1)
+        {
+            if (a[p][q] == b)
+            {
+                count = 1;
+                printf("THE NUMBER IS LOCATED AT THE POSITION %d,%d\n", p, q);
+                
+            }
+        }
+    } 
+    
+    if (count == 0)
+    {
+        printf("COULD NOT FIND THE NUMBER YOU'RE SEARCHING FOR IN THE MATRIX\n");
+    }
+  return 0 ;
+}
