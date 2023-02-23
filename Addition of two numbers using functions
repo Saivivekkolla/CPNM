@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int sum_up (int a, int b); 
+
+int main() {
+
+    int a, b, result;
+
+    printf ("Enter any two numbers \n");
+
+  scanf("%d%d",&a,&b);
+
+    result = sum_up(a, b);
+
+    printf("%d + %d = %d", a, b, result);
+
+
+    
+
+return 0;
+
+}
+
+int sum_up (int a, int b) { 
+
+    a=a+b;
+
+    return (a);
+
+}
