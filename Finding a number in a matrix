@@ -1,0 +1,111 @@
+#include<stdio.h>
+
+int main() 
+
+{
+
+    int x, y, m, n, element;
+
+    
+
+    // Order of a Matrix
+
+    printf("Enter the Rows of the matrix \n");
+
+    scanf("%d",&m);
+
+    printf("Enter the Coloumns of the matrix \n");
+
+    scanf("%d",&n);
+
+    int mtx[m][n];
+
+    
+
+    // Reading values of the matrix 
+
+    printf("Enter the elements of the matrix \n");
+
+    for (x=0; x<m; x++)
+
+    {
+
+        for (y=0; y<n; y++)
+
+        {
+
+            printf("Enter element [%d,%d] : ",x+1,y+1);
+
+            scanf("%d", &mtx[x][y]);
+
+        }
+
+    }
+
+   // Printing the matrix
+
+    printf("The matrix is \n");
+
+    for (x=0; x<m; x++)
+
+    {
+
+        for (y=0; y<n; y++)
+
+        {
+
+            printf("%d ", mtx[x][y]);
+
+        }
+
+        printf("\n");
+
+    }
+
+   printf("Enter the element you want to search: ");
+
+    int num ;
+
+  scanf("%d", & num);
+
+ int flag = 0;
+
+    for (x=0; x<m; x++)
+
+    { 
+
+        for (y=0; y<n; y++)
+
+        {
+
+            if (mtx[x][y] == num)
+
+            {
+
+                flag = 1;
+
+                printf("Element is present in the matrix at position %d,%d\n", x, y);
+
+                break;
+
+            }
+
+        }
+
+    } 
+
+    
+
+    if (flag == 0)
+
+    {
+
+        printf("Element is not present in the matrix\n");
+
+    }
+
+  
+
+    return 0; 
+
+}
